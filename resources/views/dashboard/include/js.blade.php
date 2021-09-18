@@ -1,51 +1,88 @@
-<script src="{{asset('Dashboard/assets/js/jquery.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/jquery-migrate-1.2.1.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/script.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/superfish.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/jquery.ui.totop.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/jquery.equalheights.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/jquery.mobilemenu.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/jquery.easing.1.3.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/owl.carousel.js')}}"></script>
-<script src="{{asset('Dashboard/assets/js/camera.js')}}"></script>
-<!--[if (gt IE 9)|!(IE)]><!-->
-<script src="{{asset('Dashboard/assets/js/jquery.mobile.customized.min.js')}}"></script>
-<!--<![endif]-->
-<script src="{{asset('Dashboard/assets/booking/js/booking.js')}}"></script>
+<script src="{{asset('Dashboard/assetsv1/js/jquery-1.11.3.min.js')}}"></script>             <!-- jQuery (https://jquery.com/download/) -->
+<script src="{{asset('Dashboard/assetsv1/js/popper.min.js')}}"></script>                    <!-- https://popper.js.org/ -->
+<script src="{{asset('Dashboard/assetsv1/js/bootstrap.min.js')}}"></script>                 <!-- https://getbootstrap.com/ -->
+<script src="{{asset('Dashboard/assetsv1/js/datepicker.min.js')}}"></script>                <!-- https://github.com/qodesmith/datepicker -->
+<script src="{{asset('Dashboard/assetsv1/js/jquery.singlePageNav.min.js')}}"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+<script src="{{asset('Dashboard/assetsv1/slick/slick.min.js')}}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+<script src="{{asset('Dashboard/assetsv1/js/jquery.scrollTo.min.js')}}"></script>           <!-- https://github.com/flesler/jquery.scrollTo -->
 <script>
-  $(document).ready(function(){
-  jQuery('#camera_wrap').camera({
-    loader: false,
-    pagination: false ,
-    minHeight: '444',
-    thumbnails: false,
-    height: '48.375%',
-    caption: true,
-    navigation: true,
-    fx: 'mosaic'
-  });
-  /*carousel*/
-  var owl=$("#owl");
-    owl.owlCarousel({
-    items : 2, //10 items above 1000px browser width
-    itemsDesktop : [995,2], //5 items between 1000px and 901px
-    itemsDesktopSmall : [767, 2], // betweem 900px and 601px
-    itemsTablet: [700, 2], //2 items between 600 and 0
-    itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
-    navigation : true,
-    pagination : false
-    });
-  $().UItoTop({ easingType: 'easeOutQuart' });
-  });
-</script>
+    /* Google Maps
+    ------------------------------------------------*/
+    var map = '';
+    var center;
 
-<script>
-  $(function (){
-    $('#bookingForm').bookingForm({
-      ownerEmail: '#'
+    function initialize() {
+        var mapOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(37.769725, -122.462154),
+            scrollwheel: false
+        };
+
+        map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+        google.maps.event.addDomListener(map, 'idle', function() {
+          calculateCenter();
+      });
+
+        google.maps.event.addDomListener(window, 'resize', function() {
+          map.setCenter(center);
+      });
+    }
+
+    function calculateCenter() {
+        center = map.getCenter();
+    }
+
+    function loadGoogleMap(){
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+        document.body.appendChild(script);
+    }
+
+    /* DOM is ready
+    ------------------------------------------------*/
+    $(function(){
+
+        // Change top navbar on scroll
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 100) {
+                $(".tm-top-bar").addClass("active");
+            } else {
+             $(".tm-top-bar").removeClass("active");
+            }
+        });
+
+        // Smooth scroll to search form
+        $('.tm-down-arrow-link').click(function(){
+            $.scrollTo('#tm-section-search', 300, {easing:'linear'});
+        });
+
+        // Date Picker in Search form
+        var pickerCheckIn = datepicker('#inputCheckIn');
+        var pickerCheckOut = datepicker('#inputCheckOut');
+
+        // Update nav links on scroll
+        $('#tm-top-bar').singlePageNav({
+            currentClass:'active',
+            offset: 60
+        });
+
+        // Close navbar after clicked
+        $('.nav-link').click(function(){
+            $('#mainNav').removeClass('show');
+        });
+
+        // Slick Carousel
+        $('.tm-slideshow').slick({
+            infinite: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        loadGoogleMap();                                       // Google Map
+        $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
     });
-  })
-  $(function() {
-    $('#bookingForm input, #bookingForm textarea').placeholder();
-  });
+
 </script>

@@ -84,7 +84,7 @@
         </main>
         @include('dashboard.include.footer')
     </div>
-  
+
     @include('dashboard.include.js')
 </body>
 </html>

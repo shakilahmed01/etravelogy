@@ -31,6 +31,7 @@ class TourMail extends Mailable
     public function __construct($name,$email,$country,$hotel,$checkin,$checkout,$comfort,$adults,$childrens,$room,$message)
     {
         //
+        
         $this-> name = $name;
         $this-> email = $email;
         $this-> country = $country;
