@@ -7,6 +7,7 @@ use Mail;
 use App\Mail\TourMail;
 use App\Models\Booking;
 use App\Models\Ticket;
+use App\Models\Hotel_Book;
 use Carbon\Carbon;
 class DashboardController extends Controller
 {
@@ -105,7 +106,7 @@ class DashboardController extends Controller
         $message = $request->message;
 
         Mail::to('sa27289@gmail.com')->send(new TourMail($name,$email,$country,$hotel,$checkin,$checkout,$comfort,$adults,$childrens,$room,$message));
-          return back()->with('success','Thank you for your request, we will contact you soon!');
+          return redirect('/hotel/book');
       }
 
 
@@ -124,4 +125,12 @@ class DashboardController extends Controller
 
           return view('Dashboard.ticket_search', compact('t'));
       }
+
+
+      function view_booking(){
+
+   $lists =Booking::latest()->simplePaginate(1);
+   $k = Booking::all();
+   return view('Dashboard.view_booking',compact('k','lists'));
+ }
 }

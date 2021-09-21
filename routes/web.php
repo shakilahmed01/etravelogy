@@ -35,4 +35,5 @@ Route::get('/blog', [App\Http\Controllers\DashboardController::class, 'blog'])->
 Route::get('/contact', [App\Http\Controllers\DashboardController::class, 'contact'])->name('contact');
 Route::post('/booking', [App\Http\Controllers\DashboardController::class, 'booking'])->name('booking');
 Route::get('/search',[App\Http\Controllers\DashboardController::class, 'search'])->name('search');
+Route::get('/hotel/book', [App\Http\Controllers\DashboardController::class, 'view_booking'])->name('view_booking');
 Route::get('/details/{id}',[App\Http\Controllers\DashboardController::class, 'details']);

@@ -16,6 +16,7 @@ class TicketSeeder extends Seeder
     public function run()
     {
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'coxs bazar',
           'hotel_name' =>'royal blue',
           'room'       =>1,
@@ -29,6 +30,7 @@ class TicketSeeder extends Seeder
         //1.1
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'coxs bazar',
           'hotel_name' =>'sea shell',
           'room'       =>1,
@@ -42,6 +44,7 @@ class TicketSeeder extends Seeder
         //1.2
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'coxs bazar',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
@@ -55,6 +58,7 @@ class TicketSeeder extends Seeder
         //2
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'sylhet',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
@@ -68,6 +72,7 @@ class TicketSeeder extends Seeder
         //2.1
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'sylhet',
           'hotel_name' =>'Falcon',
           'room'       =>1,
@@ -81,6 +86,7 @@ class TicketSeeder extends Seeder
         //2.2
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'sylhet',
           'hotel_name' =>'Red valvet',
           'room'       =>1,
@@ -94,6 +100,7 @@ class TicketSeeder extends Seeder
         //3
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Rajshahi',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
@@ -107,6 +114,7 @@ class TicketSeeder extends Seeder
         //3.1
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Rajshahi',
           'hotel_name' =>'Falcon',
           'room'       =>1,
@@ -120,6 +128,7 @@ class TicketSeeder extends Seeder
         //3.2
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Rajshahi',
           'hotel_name' =>'Srigal',
           'room'       =>1,
@@ -133,6 +142,7 @@ class TicketSeeder extends Seeder
         //3.3
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Rajshahi',
           'hotel_name' =>'Red Valvet',
           'room'       =>1,
@@ -146,6 +156,7 @@ class TicketSeeder extends Seeder
         //4
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Borishal',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
@@ -159,6 +170,7 @@ class TicketSeeder extends Seeder
         //4.1
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Borishal',
           'hotel_name' =>'srigal',
           'room'       =>1,
@@ -172,6 +184,7 @@ class TicketSeeder extends Seeder
         //4.2
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Borishal',
           'hotel_name' =>'Falcon',
           'room'       =>1,
@@ -185,6 +198,7 @@ class TicketSeeder extends Seeder
         //4.3
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'Borishal',
           'hotel_name' =>'Sea Shell',
           'room'       =>1,
@@ -198,6 +212,7 @@ class TicketSeeder extends Seeder
         //5
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'josshor',
           'hotel_name' =>'Rose valley',
           'room'       =>2,
@@ -211,6 +226,7 @@ class TicketSeeder extends Seeder
         //5.1
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'josshor',
           'hotel_name' =>'Sea shell',
           'room'       =>2,
@@ -224,6 +240,7 @@ class TicketSeeder extends Seeder
         //5.2
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'josshor',
           'hotel_name' =>'Srigal',
           'room'       =>2,
@@ -237,6 +254,7 @@ class TicketSeeder extends Seeder
         //5.3
 
         Ticket::create([
+          'image'     => 'tm-img-07.jpg',
           'destination'=>'josshor',
           'hotel_name' =>'Falcon',
           'room'       =>2,
