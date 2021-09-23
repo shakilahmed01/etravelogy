@@ -73,7 +73,7 @@
                                         </td> -->
 
                                         <td>
-                                          <a href="{{ url('stripe-payment') }}/{{ $list->id }}/{{ $list->slug }}" class=" btn-sm btn-primary">Click for Pay here</a>
+                                          <!-- <a href="{{ url('stripe-payment') }}/{{ $list->id }}/{{ $list->slug }}" class=" btn-sm btn-primary">Click for Pay here</a> -->
                                           <a href="tel:+01680419920" class=" btn-sm btn-primary">Make a Call</a>
                                         </td>
                                       </tr>

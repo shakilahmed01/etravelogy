@@ -37,3 +37,5 @@ Route::post('/booking', [App\Http\Controllers\DashboardController::class, 'booki
 Route::get('/search',[App\Http\Controllers\DashboardController::class, 'search'])->name('search');
 Route::get('/hotel/book', [App\Http\Controllers\DashboardController::class, 'view_booking'])->name('view_booking');
 Route::get('/details/{id}',[App\Http\Controllers\DashboardController::class, 'details']);
+Route::get('/addhotel',[App\Http\Controllers\DashboardController::class, 'addhotel'])->name('addhotel');
+Route::get('/hoteldetails/search',[App\Http\Controllers\DashboardController::class, 'hotel_search'])->name('hotel_search');

@@ -50,7 +50,7 @@ http://www.templatemo.com/tm-511-journey
                                   <a class="nav-link" href="{{route('bus')}}">Bus</a>
                               </li>
                               <li class="nav-item">
-                                  <a class="nav-link" href="{{route('visa')}}">Visa</a>
+                                  <a class="nav-link" href="{{route('visa')}}">Hajj</a>
                               </li>
                               <li class="nav-item">
                                   <a class="nav-link" href="{{route('login')}}">Log In</a>

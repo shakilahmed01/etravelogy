@@ -11,12 +11,15 @@ class Ticket extends Model
 
     protected $fillable = [
         'image',
+        'hotel_name',
         'destination',
         'room',
+        'room_type',
         'adult',
         'children',
         'checkin',
-        'checkout',
+        'room',
+        'staying_time',
 
     ];
 }

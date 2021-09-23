@@ -20,10 +20,12 @@ class TicketSeeder extends Seeder
           'destination'=>'coxs bazar',
           'hotel_name' =>'royal blue',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>5000,
         ]);
 
@@ -31,13 +33,15 @@ class TicketSeeder extends Seeder
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'coxs bazar',
+          'destination'=>'Borishal',
           'hotel_name' =>'sea shell',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>5000,
         ]);
 
@@ -45,13 +49,15 @@ class TicketSeeder extends Seeder
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'coxs bazar',
+          'destination'=>'Jossor',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
@@ -62,10 +68,12 @@ class TicketSeeder extends Seeder
           'destination'=>'sylhet',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>1,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
@@ -73,13 +81,15 @@ class TicketSeeder extends Seeder
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'sylhet',
+          'destination'=>'Khulna',
           'hotel_name' =>'Falcon',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>1,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
@@ -87,13 +97,15 @@ class TicketSeeder extends Seeder
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'sylhet',
+          'destination'=>'Chittagong',
           'hotel_name' =>'Red valvet',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>1,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
@@ -104,10 +116,12 @@ class TicketSeeder extends Seeder
           'destination'=>'Rajshahi',
           'hotel_name' =>'Rose valley',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>2,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
@@ -115,13 +129,15 @@ class TicketSeeder extends Seeder
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'Rajshahi',
+          'destination'=>'Comilla',
           'hotel_name' =>'Falcon',
           'room'       =>1,
+          'room_type'       =>'Single',
           'adult'      =>2,
           'children'   =>2,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
@@ -129,140 +145,17 @@ class TicketSeeder extends Seeder
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'Rajshahi',
-          'hotel_name' =>'Srigal',
+          'destination'=>'Comilla',
+          'hotel_name' =>'Falcon',
           'room'       =>1,
+          'room_type'       =>'Duplex',
           'adult'      =>2,
           'children'   =>2,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
+          'staying_time' =>'72hrs',
           'price'      =>7000,
         ]);
 
-        //3.3
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'Rajshahi',
-          'hotel_name' =>'Red Valvet',
-          'room'       =>1,
-          'adult'      =>2,
-          'children'   =>2,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //4
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'Borishal',
-          'hotel_name' =>'Rose valley',
-          'room'       =>1,
-          'adult'      =>1,
-          'children'   =>0,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //4.1
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'Borishal',
-          'hotel_name' =>'srigal',
-          'room'       =>1,
-          'adult'      =>1,
-          'children'   =>0,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //4.2
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'Borishal',
-          'hotel_name' =>'Falcon',
-          'room'       =>1,
-          'adult'      =>1,
-          'children'   =>0,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //4.3
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'Borishal',
-          'hotel_name' =>'Sea Shell',
-          'room'       =>1,
-          'adult'      =>1,
-          'children'   =>0,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //5
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'josshor',
-          'hotel_name' =>'Rose valley',
-          'room'       =>2,
-          'adult'      =>4,
-          'children'   =>2,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //5.1
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'josshor',
-          'hotel_name' =>'Sea shell',
-          'room'       =>2,
-          'adult'      =>4,
-          'children'   =>2,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //5.2
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'josshor',
-          'hotel_name' =>'Srigal',
-          'room'       =>2,
-          'adult'      =>4,
-          'children'   =>2,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
-
-        //5.3
-
-        Ticket::create([
-          'image'     => 'tm-img-07.jpg',
-          'destination'=>'josshor',
-          'hotel_name' =>'Falcon',
-          'room'       =>2,
-          'adult'      =>4,
-          'children'   =>2,
-          'checkin'    =>'2021-09-16',
-          'checkout'   =>'2021-09-19',
-          'price'      =>7000,
-        ]);
     }
 }

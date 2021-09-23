@@ -18,11 +18,14 @@ class CreateTicketsTable extends Migration
             $table->string('image');
             $table->string('destination');
             $table->string('hotel_name');
+
             $table->integer('room');
+            $table->string('room_type');
             $table->integer('adult');
             $table->integer('children');
             $table->date('checkin');
             $table->date('checkout');
+            $table->string('staying_time');
             $table->integer('price');
             $table->timestamps();
         });

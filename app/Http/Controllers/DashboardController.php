@@ -8,6 +8,7 @@ use App\Mail\TourMail;
 use App\Models\Booking;
 use App\Models\Ticket;
 use App\Models\Hotel_Book;
+use App\Models\Hotel_details;
 use Carbon\Carbon;
 class DashboardController extends Controller
 {
@@ -123,7 +124,7 @@ class DashboardController extends Controller
 
           // Return the search view with the resluts compacted
 
-          return view('Dashboard.ticket_search', compact('t'));
+          return view('dashboard.ticket_search', compact('t'));
       }
 
 
@@ -131,6 +132,33 @@ class DashboardController extends Controller
 
    $lists =Booking::latest()->simplePaginate(1);
    $k = Booking::all();
-   return view('Dashboard.view_booking',compact('k','lists'));
+   return view('dashboard.view_booking',compact('k','lists'));
+ }
+
+
+ //add hotel
+ function addhotel(){
+
+   return view('dashboard.addhotel');
+ }
+
+ //hotel details search
+ public function hotel_search(Request $request){
+// Get the search value from the request
+      $room_type = $request->input('room_type');
+      $adult = $request->input('adult');
+
+
+     // Search in the title and body columns from the posts table
+     $t = Ticket::query()
+          ->where('room_type', 'LIKE', "%{$room_type}%")
+          ->where('adult', 'LIKE', "%{$adult}%")
+
+         ->get();
+
+
+     // Return the search view with the resluts compacted
+
+     return view('dashboard.hotel_details', compact('t'));
  }
 }
