@@ -39,3 +39,4 @@ Route::get('/hotel/book', [App\Http\Controllers\DashboardController::class, 'vie
 Route::get('/details/{id}',[App\Http\Controllers\DashboardController::class, 'details']);
 Route::get('/addhotel',[App\Http\Controllers\DashboardController::class, 'addhotel'])->name('addhotel');
 Route::get('/hoteldetails/search',[App\Http\Controllers\DashboardController::class, 'hotel_search'])->name('hotel_search');
+Route::get('/book/{id}',[App\Http\Controllers\DashboardController::class, 'book']);

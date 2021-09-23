@@ -73,29 +73,70 @@
 
                         <tr>
 
-                            <td><span class="list-name">{{ $o->image }}</span>
+                            <td><img class="img-fluid" src="/Dashboard/assetsv1/img/{{$o->image}}" height="20000px" width="220000px"  alt="">
                                 <!-- <span class="text-muted">Florida, United States</span> -->
                             </td>
 
 
-                            <td><span class="list-name">{{ $o->hotel_name }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            <td><span class="badge badge-info">{{ $o->hotel_name }}</span>
+                              <br>
+                                <span style="color:blue;font-weight:bold">Most popular facilaties</span>
+                                <ul>
+                                  <li>free wifi</li>
+                                  <li>Airport shuttle</li>
+                                  <li> Free parking</li>
+                                  <li>Restaurant</li>
+                                  <li>Family rooms</li>
+                                  <li>Tea/Coffee Maker in All Rooms</li>
+                                  <li>Bar</li>
+                                </ul>
                             </td>
 
-                            <td><span class="list-name">{{ $o->room_type }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            <td><span class="badge badge-info">{{ $o->room_type }}</span>
+                              <br>
+                                <span style="color:blue;font-weight:bold">Types</span>
+                                <ul>
+                                  <li>Single</li>
+                                  <li>Delax</li>
+                                  <li>Super Delax</li>
+
+                                </ul>
                             </td>
-                            <td><span class="list-name">{{ $o->staying_time }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            <td><span class="badge badge-info">{{ $o->staying_time }}</span>
+                              <br>
+                              <span style="color:blue;font-weight:bold">Different hours you may choose</span>
+                              <ul>
+                                <li>12hrs</li>
+                                <li>24hrs</li>
+                                <li>72hrs</li>
+                                <li>4 days</li>
+                                <li>7 days</li>
+                                <li>10 days</li>
+
+                              </ul>
                             </td>
-                            <td><span class="list-name">{{ $o->adult }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            <td><span class="badge badge-info">{{ $o->adult }}</span>
+                              <br>
+                                <span style="color:blue;font-weight:bold">You must have</span>
+                                <ul>
+                                  <li>18+</li>
+
+
+                                </ul>
                             </td>
-                            <td><span class="list-name">{{ $o->children }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            <td><span class="badge badge-info">{{ $o->children }}</span>
+                              <br>
+                                <span style="color:blue;font-weight:bold">You must have</span>
+                                <ul>
+                                  <li>0 to 12 </li>
+
+
+                                </ul>
                             </td>
-                            <td><span class="list-name">{{ $o->price }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            <td><span class="badge badge-info">{{ $o->price }}bdt</span>
+                              <br>
+                                <span style="color:blue;font-weight:bold">This content vary with users needs</span>
+
                             </td>
 
 
@@ -103,7 +144,7 @@
 
                             <td>
 
-                                <a href="{{ url('details') }}/{{ $o->id }}" class=" btn-sm btn-danger">See Details</a>
+                                <a href="{{ url('book') }}/{{ $o->id }}" class=" btn-sm btn-success">Booking</a>
                             </td>
                           </tr>
 

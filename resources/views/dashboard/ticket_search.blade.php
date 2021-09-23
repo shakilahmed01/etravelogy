@@ -50,13 +50,8 @@
                         <tr>
 
                           <th>Destination</th>
+                            <th>Image</th>
                             <th>Hotel Name</th>
-                            <th>room</th>
-                            <th>Adults</th>
-                            <th>Childrens</th>
-                            <th>Check- in</th>
-                            <th>Check- out</th>
-                            <th>Price</th>
 
                             <!-- <th>Created At</th> -->
                             <th>Action</th>
@@ -70,40 +65,25 @@
 
                         <tr>
 
-                            <td><span class="list-name">{{ $o->destination }}</span>
+                            <td><span class="list-name"><h1>{{ $o->destination }}</h1></span>
+                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            </td>
+                            <td><img class="img-fluid" src="/Dashboard/assetsv1/img/{{$o->image}}" height="500px" width="700px"  alt="">
+                                <!-- <span class="text-muted">Florida, United States</span> -->
+                            </td>
+                            <td><span class="list-name"><h1>{{ $o->hotel_name }}</h1></span>
                                 <!-- <span class="text-muted">Florida, United States</span> -->
                             </td>
 
-                            <td><span class="list-name">{{ $o->hotel_name }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
 
-                            <td><span class="list-name">{{ $o->room }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
-                            <td><span class="list-name">{{ $o->adult }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
-                            <td><span class="list-name">{{ $o->children }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
-                            <td><span class="list-name">{{ $o->checkin }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
-                            <td><span class="list-name">{{ $o->checkout }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
 
-                            <td><span class="list-name">{{ $o->price }}</span>
-                                <!-- <span class="text-muted">Florida, United States</span> -->
-                            </td>
 
 
 
 
                             <td>
 
-                                <a href="{{ url('details') }}/{{ $o->id }}" class=" btn-sm btn-danger">See Details</a>
+                                <a href="{{ url('details') }}/{{ $o->id }}" class=" btn-sm btn-primary bold" > Details</a>
                             </td>
                           </tr>
 

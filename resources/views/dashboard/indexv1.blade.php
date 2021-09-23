@@ -43,7 +43,7 @@
                                         <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Search</button>
                                     </div>
                                 </div> <!-- form-row -->
-                                
+
                             </form>
 
                         </div> <!-- row -->
@@ -64,7 +64,7 @@
                 </div>
             </section>
 
-            <div class="form-control">
+
               <h3 class="text-uppercase tm-banner-title">Booking Form</h3>
               <form id="bookingForm"  method="post" action="{{route('booking')}}">
                 @csrf
@@ -75,8 +75,8 @@
                     </div>
 
                     <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                        <label for="Country">Country</label>
-                        <input name="country" type="text" class="form-control" id="Country" placeholder="Country">
+                        <label for="Country">Country/Area</label>
+                        <input name="country" type="text" class="form-control" id="Country" placeholder="Country/Area">
                     </div>
                 <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
 
@@ -143,9 +143,9 @@
                   <label for="message">Message</label>
                   <textarea name="message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
                 </div>
-                <button  class="btn btn-primary" data-type="submit">Submit</button>
+                <button  class="btn btn-primary" data-type="submit">Reserve</button>
               </form>
-            </div>
+      
 
 
 

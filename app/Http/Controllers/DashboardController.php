@@ -46,7 +46,11 @@ class DashboardController extends Controller
       return view('dashboard.ticket_details',compact('single_ticket'));
     }
 
+    function book($id){
+      $single_ticket= Ticket:: findOrFail($id);
 
+      return view('dashboard.book',compact('single_ticket'));
+    }
 
 
 
@@ -147,12 +151,14 @@ class DashboardController extends Controller
 // Get the search value from the request
       $room_type = $request->input('room_type');
       $adult = $request->input('adult');
+      $children = $request->input('children');
 
 
      // Search in the title and body columns from the posts table
      $t = Ticket::query()
           ->where('room_type', 'LIKE', "%{$room_type}%")
           ->where('adult', 'LIKE', "%{$adult}%")
+          ->where('children', 'LIKE', "%{$children}%")
 
          ->get();
 

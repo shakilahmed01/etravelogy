@@ -53,19 +53,7 @@
     <div class="row">
 
     </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="form-group">
-                <span class="form-label">From</span>
-                <input class="form-control" type="date" name="enter_date" required>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                <span class="form-label">To</span>
-                <input class="form-control" type="date" name="out_date" required>
-            </div>
-        </div>
+        
         <div class="col-md-2">
             <div class="form-group">
                 <span class="form-label">Adults (18+)</span>
@@ -88,15 +76,15 @@
                 <span class="select-arrow"></span>
             </div>
         </div>
-    </div>
+
     <div class="row">
         <div class="col-md-3">
             <div class="form-group">
                 <span class="form-label">Room class</span>
                 <select class="form-control" name="room_type">
                     <option value="Single">Single</option>
-                    <option value="Duplex">Duplex</option>
-                    <option value="Duplex">Super Duplex</option>
+                    <option value="Delax">Delax</option>
+                    <option value="Super Delax">Super Delax</option>
                 </select>
                 <span class="select-arrow"></span>
             </div>
@@ -114,85 +102,7 @@
 
 
 
-<form id="bookingForm"  method="post" action="{{route('booking')}}">
-  @csrf
 
-      <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-          <label for="Name">Name</label>
-          <input name="name" type="text" class="form-control" id="Name" placeholder="Your Name">
-      </div>
-
-      <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-          <label for="Country">Country/Area</label>
-          <input name="country" type="text" class="form-control" id="Country" placeholder="Country/Area">
-      </div>
-  <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-
-    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-        <label for="email">Email</label>
-        <input name="email" type="text" class="form-control" id="email" placeholder="Email" data-constraints="@NotEmpty @Required @Email">
-    </div>
-
-    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-        <label for="hotel">Hotel</label>
-        <input name="hotel" type="text" class="form-control" id="hotel" placeholder="Hotel" >
-    </div>
-  </div>
-
-  <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-      <label for="inputCheckIn">Check In Date</label>
-      <input name="checkin" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
-  </div>
-
-  <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-      <label for="inputCheckout">Check-out</label>
-      <input name="checkout" type="date" class="form-control" id="inputCheckout" placeholder="Check Out">
-  </div>
-
-
-  <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-    <em>Comfort</em>
-    <select name="comfort" class="form-control tm-select" data-class="tmSelect tmSelect2" data-constraints="">
-      <option>Cheap</option>
-      <option>Standard</option>
-      <option>Luxary</option>
-
-    </select>
-  </div>
-  <br>
-  <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-    <em>Adults</em>
-    <select name="adults" class="form-control tm-select" data-class="tmSelect tmSelect2" data-constraints="">
-      <option>1</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-    </select>
-
-    <em>Rooms</em>
-    <select name="room" class="form-control tm-select" data-class="tmSelect tmSelect2" data-constraints="">
-      <option>1</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-    </select>
-
-    <em>Children</em>
-    <select name="childrens" class="form-control tm-select" data-class="tmSelect tmSelect2" data-constraints="">
-      <option>0</option>
-      <option>0</option>
-      <option>1</option>
-      <option>2</option>
-    </select>
-  </div>
-
-
-  <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1 ">
-    <label for="message">Message</label>
-    <textarea name="message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
-  </div>
-  <button  class="btn btn-primary" data-type="submit">Reserve</button>
-</form>
     <!-- /.row -->
 
     <!-- Related Projects Row -->
