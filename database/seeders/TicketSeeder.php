@@ -25,8 +25,8 @@ class TicketSeeder extends Seeder
           'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>5000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //1.1
@@ -41,8 +41,8 @@ class TicketSeeder extends Seeder
           'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>5000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //1.2
@@ -57,8 +57,8 @@ class TicketSeeder extends Seeder
           'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //2
@@ -73,8 +73,8 @@ class TicketSeeder extends Seeder
           'children'   =>1,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //2.1
@@ -89,8 +89,8 @@ class TicketSeeder extends Seeder
           'children'   =>1,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //2.2
@@ -105,8 +105,8 @@ class TicketSeeder extends Seeder
           'children'   =>1,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //3
@@ -121,8 +121,8 @@ class TicketSeeder extends Seeder
           'children'   =>2,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //3.1
@@ -137,24 +137,24 @@ class TicketSeeder extends Seeder
           'children'   =>2,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
         //3.2
 
         Ticket::create([
           'image'     => 'tm-img-07.jpg',
-          'destination'=>'Comilla',
+          'destination'=>'Rangpur',
           'hotel_name' =>'Falcon',
           'room'       =>1,
           'room_type'       =>'Delax',
-          'adult'      =>2,
-          'children'   =>2,
+          'adult'      =>1,
+          'children'   =>0,
           'checkin'    =>'2021-09-16',
           'checkout'   =>'2021-09-19',
-          'staying_time' =>'72hrs',
-          'price'      =>7000,
+          'staying_time' =>'24hrs',
+          'price'      =>2334,
         ]);
 
     }

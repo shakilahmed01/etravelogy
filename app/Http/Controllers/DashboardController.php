@@ -7,7 +7,7 @@ use Mail;
 use App\Mail\TourMail;
 use App\Models\Booking;
 use App\Models\Ticket;
-use App\Models\Hotel_Book;
+use App\Models\HotelBook;
 use App\Models\Hotel_details;
 use Carbon\Carbon;
 class DashboardController extends Controller
@@ -166,5 +166,42 @@ class DashboardController extends Controller
      // Return the search view with the resluts compacted
 
      return view('dashboard.hotel_details', compact('t'));
+ }
+ function hotelbook(Request $request)
+ {
+   $checkin =  new Carbon($request->checkin);
+   $checkout = new Carbon($request->checkout);
+   $days = $checkin->diffInDays($checkout);
+   $request->validate([
+
+          'name'          =>'required',
+          'email'                =>'required',
+          'mobile'                  =>'required',
+
+
+        ]);
+  HotelBook::insert([
+
+     'hotel_name'              =>$request->hotel_name,
+
+     'adult'                   =>$request->adult,
+     'children'                =>$request->children,
+     'room_type'               =>$request->room_type,
+     'checkin'                 =>$request->checkin,
+     'checkout'                =>$request->checkout,
+     'name'                    =>$request->name,
+     'email'                   =>$request->email,
+     'mobile'                  =>$request->mobile,
+     'amount'                  =>$request->price*$days,
+     'created_at'              =>Carbon::now(),
+       ]);
+
+
+
+       return back()->with('success','Thank you for your request, we will contact you soon!');
+
+   //echo $request->product_name.'<br>';
+   //echo $request->quantity." cars ".$request->price.'<br>';
+   //echo $days." days price is ".$request->price*$days.'<br>';
  }
 }

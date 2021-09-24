@@ -4,7 +4,7 @@
 <div class="container">
 
     <!-- Portfolio Item Heading -->
-    <h1 class="my-4">{{ $single_ticket->destination }}
+    <h1 class="success">{{ $single_ticket->destination }}
       <small></small>
     </h1>
 
@@ -53,34 +53,38 @@
     <div class="row">
 
     </div>
-        
-        <div class="col-md-2">
+
+        <div class="col-md-5">
             <div class="form-group">
-                <span class="form-label">Adults (18+)</span>
+                <span style="color:blue;font-weight:bold">Adults (18+)</span>
                 <select class="form-control" name="adult">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
+                    <option value="4">4</option>
+
                 </select>
                 <span class="select-arrow"></span>
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-5">
             <div class="form-group">
-                <span class="form-label">Children (0-17)</span>
+                <span style="color:blue;font-weight:bold">Children (0-17)</span>
                 <select class="form-control" name="children">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                 </select>
                 <span class="select-arrow"></span>
             </div>
         </div>
 
-    <div class="row">
-        <div class="col-md-3">
+
+        <div class="col-md-5">
             <div class="form-group">
-                <span class="form-label">Room class</span>
+                <span style="color:blue;font-weight:bold">Room class</span>
                 <select class="form-control" name="room_type">
                     <option value="Single">Single</option>
                     <option value="Delax">Delax</option>
@@ -91,10 +95,10 @@
         </div>
         <div class="col-md-3">
             <div class="form-btn">
-                <button class="btn btn-primary" data-type="submit">Show Hotel List</button>
+                <button class="btn btn-primary" data-type="submit">Check availablity</button>
             </div>
         </div>
-    </div>
+
 </form>
       </div>
 

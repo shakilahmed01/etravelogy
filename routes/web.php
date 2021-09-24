@@ -40,3 +40,4 @@ Route::get('/details/{id}',[App\Http\Controllers\DashboardController::class, 'de
 Route::get('/addhotel',[App\Http\Controllers\DashboardController::class, 'addhotel'])->name('addhotel');
 Route::get('/hoteldetails/search',[App\Http\Controllers\DashboardController::class, 'hotel_search'])->name('hotel_search');
 Route::get('/book/{id}',[App\Http\Controllers\DashboardController::class, 'book']);
+Route::post('/book/hotel',[App\Http\Controllers\DashboardController::class, 'hotelbook'])->name('hotelbook');

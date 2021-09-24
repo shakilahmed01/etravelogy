@@ -6,7 +6,7 @@
 
       <body>
 @include('dashboard.include.flash')
-
+  
         <div class="tm-page-wrap mx-auto"
             <section class="tm-banner">
 
@@ -145,7 +145,7 @@
                 </div>
                 <button  class="btn btn-primary" data-type="submit">Reserve</button>
               </form>
-      
+
 
 
 
